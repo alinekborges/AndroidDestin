@@ -1,4 +1,4 @@
-package com.android.semanadeeletronica.destincompleto.util;
+package com.semanadeeletronica.destincompleto.util;
 
 import android.os.StrictMode;
 import android.util.Log;

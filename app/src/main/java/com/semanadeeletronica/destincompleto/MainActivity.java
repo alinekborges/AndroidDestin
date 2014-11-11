@@ -1,26 +1,22 @@
-package com.android.semanadeeletronica.destincompleto;
+package com.semanadeeletronica.destincompleto;
 
-import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
-import com.android.semanadeeletronica.destincompleto.adapter.ListAdapter;
-import com.android.semanadeeletronica.destincompleto.model.Destination;
-import com.android.semanadeeletronica.destincompleto.sample.SampleValues;
-import com.android.semanadeeletronica.destincompleto.util.JSONDownloader;
-import com.android.semanadeeletronica.destincompleto.util.Navigation;
-import com.android.semanadeeletronica.destincompleto.util.Screen;
+import com.semanadeeletronica.destincompleto.adapter.ListAdapter;
+import com.semanadeeletronica.destincompleto.model.Destination;
+import com.semanadeeletronica.destincompleto.sample.SampleValues;
+import com.semanadeeletronica.destincompleto.util.JSONDownloader;
+import com.semanadeeletronica.destincompleto.util.Navigation;
+import com.semanadeeletronica.destincompleto.util.Screen;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -59,8 +55,68 @@ public class MainActivity extends Activity {
         View header = getLayoutInflater().inflate(R.layout.list_header, null);
         listView.addHeaderView(header);
 
-        new DownloadTask().execute("");
+        //botoes de mudança de JSON e SAMPLE
+        final View github = header.findViewById(R.id.GITHUB);
+        final TextView json = (TextView) header.findViewById(R.id.JSON);
+        final TextView sample = (TextView) header.findViewById(R.id.SAMPLE);
 
+        header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.navigate(context, Screen.Github, Navigation.Animation.GO);
+            }
+        });
+
+        github.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.navigate(context, Screen.Github, Navigation.Animation.GO);
+            }
+        });
+
+        json.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DownloadTask().execute("");
+                json.setTextColor(getResources().getColor(android.R.color.white));
+                sample.setTextColor(getResources().getColor(R.color.gray));
+            }
+        });
+
+        sample.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sample.setTextColor(getResources().getColor(android.R.color.white));
+                json.setTextColor(getResources().getColor(R.color.gray));
+                destinationList = SampleValues.getDestinationsList();
+                ListAdapter adapter = new ListAdapter(context, destinationList);
+                listView.setAdapter(adapter);
+                listView.setDividerHeight(0);
+
+                //listener que escuta quando um item da lista é clicado
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Navigation.navigate(context, Screen.Detalhes, Navigation.Animation.GO, destinationList.get(position - 1));
+                    }
+                });
+
+            }
+        });
+        //new DownloadTask().execute("");
+        //vou inicializar por padrao pelo sample
+        destinationList = SampleValues.getDestinationsList();
+        ListAdapter adapter = new ListAdapter(context, destinationList);
+        listView.setAdapter(adapter);
+        listView.setDividerHeight(0);
+
+        //listener que escuta quando um item da lista é clicado
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Navigation.navigate(context, Screen.Detalhes, Navigation.Animation.GO, destinationList.get(position-1));
+            }
+        });
     }
 
     @Override
@@ -83,22 +139,7 @@ public class MainActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_server) {
-            new DownloadTask().execute("");
-        } else if (id == R.id.action_static) {
-            destinationList = SampleValues.getDestinationsList();
-            ListAdapter adapter = new ListAdapter(context, destinationList);
-            listView.setAdapter(adapter);
-            listView.setDividerHeight(0);
 
-            //listener que escuta quando um item da lista é clicado
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Navigation.navigate(context, Screen.Detalhes, Navigation.Animation.GO, destinationList.get(position - 1));
-                }
-            });
-        }
         return super.onOptionsItemSelected(item);
     }
 

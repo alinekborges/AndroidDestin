@@ -9,7 +9,7 @@
 
     <style name="CustomActionBarTheme"
         parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">#55FFFFFF</item>
+        <item name="android:background">#00FFFFFF</item>
         <item name="android:displayOptions">showHome|useLogo</item>
         <item name="android:icon">@android:color/transparent</item>
     </style>

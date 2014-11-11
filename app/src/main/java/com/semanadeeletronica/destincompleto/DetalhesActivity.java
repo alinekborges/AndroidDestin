@@ -1,16 +1,15 @@
-package com.android.semanadeeletronica.destincompleto;
+package com.semanadeeletronica.destincompleto;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.semanadeeletronica.destincompleto.model.Destination;
-import com.android.semanadeeletronica.destincompleto.util.Navigation;
-import com.android.semanadeeletronica.destincompleto.util.Screen;
+import com.semanadeeletronica.destincompleto.model.Destination;
+import com.semanadeeletronica.destincompleto.util.Navigation;
+import com.semanadeeletronica.destincompleto.util.Screen;
 import com.squareup.picasso.Picasso;
 
 

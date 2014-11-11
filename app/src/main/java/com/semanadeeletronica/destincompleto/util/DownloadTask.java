@@ -1,17 +1,13 @@
-package com.android.semanadeeletronica.destincompleto.util;
+package com.semanadeeletronica.destincompleto.util;
 
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.android.semanadeeletronica.destincompleto.adapter.ListAdapter;
-import com.android.semanadeeletronica.destincompleto.model.Destination;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.semanadeeletronica.destincompleto.model.Destination;
 
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 

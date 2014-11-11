@@ -1,4 +1,4 @@
-package com.android.semanadeeletronica.destincompleto.model;
+package com.semanadeeletronica.destincompleto.model;
 
 /**
  * Created by Aline Borges on 11/9/2014.

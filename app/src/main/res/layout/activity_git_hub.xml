@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.android.semanadeeletronica.destin.DetalhesActivity">
+    tools:context="com.android.semanadeeletronica.com.semanadeeletronica.destinocompleto.GitHubActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,6 +43,64 @@
                     android:textStyle="bold" />
             </RelativeLayout>
         </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/drop_shadow"
+            android:layout_margin="5dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtGitHub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:text="GITHUB"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="4px"
+                    android:layout_alignEnd="@+id/txtGitHub"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/txtGitHub"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:onClick="gitHubOnClick">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/alinekborges"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/github"
+                android:scaleType="fitCenter"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -232,49 +290,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical"
-            android:background="@drawable/drop_shadow"
-            android:layout_margin="5dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp">
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/txtGitHub"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="8dp"
-                    android:text="GITHUB"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <View
-                    android:layout_width="wrap_content"
-                    android:layout_height="4px"
-                    android:layout_alignEnd="@+id/txtGitHub"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignRight="@+id/txtGitHub"
-                    android:background="@color/accent" />
-            </RelativeLayout>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/github"
-                android:scaleType="fitCenter"
-                android:layout_margin="16dp"/>
-
-        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

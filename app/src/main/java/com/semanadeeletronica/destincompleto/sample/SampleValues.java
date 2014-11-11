@@ -1,6 +1,7 @@
-package com.android.semanadeeletronica.destincompleto.sample;
+package com.semanadeeletronica.destincompleto.sample;
 
-import com.android.semanadeeletronica.destincompleto.model.Destination;
+
+import com.semanadeeletronica.destincompleto.model.Destination;
 
 import java.util.ArrayList;
 

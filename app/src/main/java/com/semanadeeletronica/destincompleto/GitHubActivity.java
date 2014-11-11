@@ -1,9 +1,14 @@
-package com.android.semanadeeletronica.destincompleto;
+package com.semanadeeletronica.destincompleto;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.semanadeeletronica.destincompleto.util.Navigation;
 
 
 public class GitHubActivity extends Activity {
@@ -12,6 +17,19 @@ public class GitHubActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_git_hub);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Navigation.animate(this, Navigation.Animation.BACK);
+    }
+
+    public void gitHubOnClick(View v) {
+        String url = "https://github.com/alinekborges/AndroidDestin";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
     }
 
 

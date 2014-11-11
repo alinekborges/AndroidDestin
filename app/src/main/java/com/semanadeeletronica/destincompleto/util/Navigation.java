@@ -1,10 +1,11 @@
-package com.android.semanadeeletronica.destincompleto.util;//package com.miligrama.alineborges.miligrama.util;
+package com.semanadeeletronica.destincompleto.util;//package com.miligrama.alineborges.miligrama.util;
 
 import android.app.Activity;
 import android.content.Intent;
 
 
-import com.android.semanadeeletronica.destincompleto.R;
+import com.semanadeeletronica.destincompleto.R;
+import com.semanadeeletronica.destincompleto.util.Screen;
 
 import java.util.HashMap;
 

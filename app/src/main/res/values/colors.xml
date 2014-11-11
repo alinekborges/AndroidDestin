@@ -3,5 +3,6 @@
 
     <item name="accent" type="color">#3F51B5</item>
     <item name="accent_2" type="color">#E91E63</item>
+    <item name="gray" type="color">#AAA</item>
 
 </resources>

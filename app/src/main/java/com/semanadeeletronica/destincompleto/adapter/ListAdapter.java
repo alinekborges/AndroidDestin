@@ -1,4 +1,4 @@
-package com.android.semanadeeletronica.destincompleto.adapter;
+package com.semanadeeletronica.destincompleto.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -7,10 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.android.semanadeeletronica.destincompleto.DetalhesActivity;
-import com.android.semanadeeletronica.destincompleto.R;
-import com.android.semanadeeletronica.destincompleto.model.Destination;
+import com.semanadeeletronica.destincompleto.R;
+import com.semanadeeletronica.destincompleto.model.Destination;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
