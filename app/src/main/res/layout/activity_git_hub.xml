@@ -1,0 +1,280 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.semanadeeletronica.destin.DetalhesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:elevation="1dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/eletronica"
+                android:transitionName="transition"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#55000000"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingBottom="24dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="32dp"
+                    android:paddingTop="24dp"
+                    android:text="Aline K. Borges"
+                    android:textColor="@android:color/white"
+                    android:textSize="28dp"
+                    android:id="@+id/txtNome"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/drop_shadow"
+            android:layout_margin="5dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtPaisTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:text="OBJETIVO"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="4px"
+                    android:layout_alignEnd="@+id/txtPaisTitulo"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/txtPaisTitulo"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:text="Apicativo exemplo para demonstrar a utilização de ListView com Adapter personalizado e download e parse de informações de um WebService REST em JSON"
+                android:textSize="16dp"
+                android:id="@+id/txtPais"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/drop_shadow"
+            android:layout_margin="5dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtRegiaoTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:text="UTFPR"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="4px"
+                    android:layout_alignEnd="@+id/txtRegiaoTitulo"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/txtRegiaoTitulo"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:text="Este aplicativo foi desenvolvido para o minicurso de Android da Semana Acadêmica de Eletrônica da UTFPR"
+                android:textSize="16dp"
+                android:id="@+id/txtRegiao"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/drop_shadow"
+            android:layout_margin="5dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtCuriosidadeTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:text="DATA"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="4px"
+                    android:layout_alignEnd="@+id/txtCuriosidadeTitulo"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/txtCuriosidadeTitulo"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:text="Curso ministrado no dia 12 de novembro de 2014"
+                android:textSize="16dp"
+                android:id="@+id/txtCuriosidade"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/drop_shadow"
+            android:layout_margin="5dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtLicensa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:text="LICENSA"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="4px"
+                    android:layout_alignEnd="@+id/txtLicensa"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/txtLicensa"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="8dp"
+                android:text="Utilize o aplicativo exemplo de forma livre, porém mantenha os créditos caso reutilize em alguma de suas aplicações. Caso me encontre um dia, aceito uma cerveja em nome de BEER WARE"
+                android:textSize="16dp"
+                android:id="@+id/txtLicensaConteudo"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/drop_shadow"
+            android:layout_margin="5dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtGitHub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:text="GITHUB"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="4px"
+                    android:layout_alignEnd="@+id/txtGitHub"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/txtGitHub"
+                    android:background="@color/accent" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/github"
+                android:scaleType="fitCenter"
+                android:layout_margin="16dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="accent" type="color">#3F51B5</item>
+    <item name="accent_2" type="color">#E91E63</item>
+
+</resources>
